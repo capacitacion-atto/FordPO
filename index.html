@@ -50,7 +50,7 @@ var valor=$("#rcdni").val();var valor2=$("#rcing").val();var valor3=$("#rcan").v
     
   function buscar(){
 	  $("#loader").show();$("#1").hide();
-	  var crmv;var valor=$("#txtb").val();var valor2=$("#txtb1").val();var lkn="https://script.google.com/macros/s/AKfycbzeXU6L5Ur5gKf-Y0rDHXrucdFxb_eh5SqPR2tMkpn6srVev8LJMp3W1fdUec2y1k21/exec?dni="+valor+"&ps="+valor2
+	  var crmv;var valor=$("#txtb").val();var valor2=$("#txtb1").val();var lkn="https://script.google.com/macros/s/AKfycbx5DoAkteoHBs4MZnE83ra4fw779th4CCkU7X0XtdKintp2ZLeHL-gKm1d4-XQQRVGY/exec?dni="+valor+"&ps="+valor2
 																									
 																				
 		
@@ -62,13 +62,12 @@ var valor=$("#rcdni").val();var valor2=$("#rcing").val();var valor3=$("#rcan").v
 		 $("#tasesor").html(data.user[0]["ASESOR"]);
 		 $("#UGAP").html(data.user[0]["GAP"]);
 		 $("#PGAP").html(data.user[0]["PGAP"]);
-		 $("#tpstlc").html(data.user[0]["PWINCRM"]);
+		 $("#tpstlc").html(data.user[0]["PUSERF"]);
 		 $("#tpf").html(data.user[0]["PNT"]);
-		 $("#tip").html(data.user[0]["NIP"]);
-		crmv='tc-ext&bsol;'+data.user[0]["WINCRM"];$("#tutlc").html(crmv);
-		 $("#tutlc2").html(data.user[0]["WINCRM"]);
+		 $("#tip").html(data.user[0]["IPWAHA"]);
+		$("#tutlc2").html(data.user[0]["USERF"]);
 		 $("#tida").html(data.user[0]["IDA"]);
-		 $("#tintr").html(data.user[0]["INTRA"]);
+		 
 		 
 		 
 		 setTimeout($("#loader").hide(),3000)
