@@ -41,6 +41,8 @@
 	    else{alert("Los datos ingresados, son incorrectos.");$("#loader").hide();$("#1").show();$("#txtpss").val("");$("#txtb").val("");$("#txtb").focus()}
 	  })}
 	  
+function verpass(){$("#modal1f").show();$("#passvopa").text($("#tvopa").html())}
+function cerraralerta(){$("#modal1f").hide();}
 
 function abrirgap(){alert("Recordar que para marcar GAP debe tener conectado Forticlient en su PC (solo funciona en pc)");window.open("http://172.20.224.149/ControlAsistencia/login.php","_blank")}
   </script>
@@ -200,7 +202,7 @@ input[type=number]::-webkit-outer-spin-button {
   <nav class="navbar navbar-dark bg-dark"style="padding: .1rem 0.1rem;"><span style="color:white;text-align:center;width:100%">USUARIO FORD</span></nav>
   <table class="table" style="font-size:11px;">
    <tr><td CLASS="bg-dark" style="color:white;width:30%">USUARIO FORD</td><td id="tutlc"></td></tr>
-   <tr><td CLASS="bg-dark" style="color:white;width:30%">VOPA</td><td id="tvopa"></td></tr>
+   <tr><td CLASS="bg-dark" style="color:white;width:30%">VOPA</td><td><a href="javascript:verpass()" id="tvopa"></a></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">AS400</td><td id="tas400"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">MAIL</td><td id="tpstlc"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">AVAYA:</td><td id="tida"></td></tr>
@@ -212,7 +214,26 @@ input[type=number]::-webkit-outer-spin-button {
 </div>
 
 
-
+ <!--MODAL FINALIZAR REGISTRO-->
+  <div class="modal" tabindex="-1" role="dialog"id="modal1f">
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">PASS VOPA</h5>
+      </div>
+      <div class="modal-body">
+	   <span id="passvopa" style="font-weight:bold;font-size:1.5em;"></span>
+	  
+          
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="javascript:cerraralerta()">Cerrar</button>
+        
+      </div>
+	    </div>
+  </div>
+</div>
+ 
+ </div>
 
 
  
