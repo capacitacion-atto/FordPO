@@ -42,8 +42,9 @@
 	  })}
 	  
 function verpass(){$("#modal1f").show();$("#passvopa").text($("#tvopa").html())}
+function verpass2(){$("#modal2f").show();$("#passAS400").text($("#tas400").html())}
 function cerraralerta(){$("#modal1f").hide();}
-
+function cerraralerta2(){$("#modal2f").hide();}
 function abrirgap(){alert("Recordar que para marcar GAP debe tener conectado Forticlient en su PC (solo funciona en pc)");window.open("http://172.20.224.149/ControlAsistencia/login.php","_blank")}
   </script>
   <script>
@@ -203,7 +204,7 @@ input[type=number]::-webkit-outer-spin-button {
   <table class="table" style="font-size:11px;">
    <tr><td CLASS="bg-dark" style="color:white;width:30%">USUARIO FORD</td><td id="tutlc"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">VOPA</td><td><a href="javascript:verpass()" id="tvopa"></a></td></tr>
-   <tr><td CLASS="bg-dark" style="color:white;width:30%">AS400</td><td id="tas400"></td></tr>
+   <tr><td CLASS="bg-dark" style="color:white;width:30%">AS400</td><td><a href="javascript:verpass2()" id="tas400"></a></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">MAIL</td><td id="tpstlc"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">AVAYA:</td><td id="tida"></td></tr>
   </table>
@@ -235,7 +236,26 @@ input[type=number]::-webkit-outer-spin-button {
  
  </div>
 
-
+ <!--MODAL FINALIZAR REGISTRO-->
+  <div class="modal" tabindex="-1" role="dialog"id="modal2f" style="background: rgb(0 0 0 / 64%)">
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">PASS AS400</h5>
+      </div>
+      <div class="modal-body">
+	   <span id="passAS400" style="font-weight:bold;font-size:1.5em;"></span>
+	  
+          
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="javascript:cerraralerta2()">Cerrar</button>
+        
+      </div>
+	    </div>
+  </div>
+</div>
+ 
+ </div>
  
  
  <footer id="footer" class="py-2 bg-dark text-white-50 ">
