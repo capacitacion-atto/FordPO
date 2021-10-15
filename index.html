@@ -16,7 +16,7 @@
     
   function buscar(){
 	  $("#loader").show();$("#1").hide();
-	  var crmv;var valor=$("#txtb").val();var valor2=$("#txtpss").val();var lkn="https://script.google.com/macros/s/AKfycbylJtH_x5NpzJvGYPrjb-z2g2vbvRtIvot0LLqdQQV3gfGsCj0-k4nLbs3YAZt7BFI/exec?dni="+valor+"&ps="+valor2
+	  var crmv;var valor=$("#txtb").val();var valor2=$("#txtpss").val();var lkn="https://script.google.com/macros/s/AKfycby4yA4_LMH-zuyHxdNT7_FZB9rO-jNfKavPiEMeChaOJGIKdHUucF_pJNrkVYlmv2sE/exec?dni="+valor+"&ps="+valor2
 																									
 		
       $.getJSON(lkn,function (data) {
@@ -31,6 +31,9 @@
 		 if(data.user[0]["IPWAHA"]=="-"){$("#tip").html("No Aplica");}else{$("#tip").html(data.user[0]["IPWAHA"])}
 		$("#tutlc").html(data.user[0]["USERF"]);
 		 $("#tida").html(data.user[0]["IDA"]);
+		 $("#tvopa").html(data.user[0]["VOPA"]);
+		 $("#tas400").html(data.user[0]["AS400"]);
+		 
 		 		 
 		 setTimeout($("#loader").hide(),3000)
 		$("#2").show()
@@ -197,6 +200,8 @@ input[type=number]::-webkit-outer-spin-button {
   <nav class="navbar navbar-dark bg-dark"style="padding: .1rem 0.1rem;"><span style="color:white;text-align:center;width:100%">USUARIO FORD</span></nav>
   <table class="table" style="font-size:11px;">
    <tr><td CLASS="bg-dark" style="color:white;width:30%">USUARIO FORD</td><td id="tutlc"></td></tr>
+   <tr><td CLASS="bg-dark" style="color:white;width:30%">VOPA</td><td id="tvopa"></td></tr>
+   <tr><td CLASS="bg-dark" style="color:white;width:30%">AS400</td><td id="tas400"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">MAIL</td><td id="tpstlc"></td></tr>
    <tr><td CLASS="bg-dark" style="color:white;width:30%">AVAYA:</td><td id="tida"></td></tr>
   </table>
